@@ -1,0 +1,45 @@
+/* Desk background */
+.page-container {
+    background-color: #00b2ff;
+}
+
+.codex-editor{
+    background-color: aqua;
+    padding: 0.5rem;
+}
+
+.navbar {
+    background-color: coral;
+}
+
+/* .page-head{
+    background-color: rgb(0, 0, 0);
+    color: white;
+} */
+
+.link-content{
+    color: rgb(236, 9, 9);
+}
+
+.widget.onboarding-widget-box {
+    background-color:rgb(4, 180, 224);
+    border-radius: 7px;
+}
+
+/* Sidebar background */
+.layout-side-section {
+    background-color: #dad60c;
+    color: #ffffff ;
+    border-radius: 7px;
+}
+
+/* Sidebar links */
+.sidebar-item {
+    color: #05bdeb;
+}
+
+/* Sidebar link hover */
+.sidebar-item:hover {
+    background-color: #acaa2f;
+    color: #030000;
+}

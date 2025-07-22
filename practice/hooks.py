@@ -21,16 +21,31 @@ app_license = "mit"
 # 	}
 # ]
 
+
+
+
+doctype_js = {
+    "Sales Invoice": "public/js/custom_btn_sales_invoice.js"
+}
+
+
+
+
+
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/practice/css/practice.css"
-# app_include_js = "/assets/practice/js/practice.js"
+# app_include_css = "practice.public.css.Custom_Desk"
+# app_include_js = "practice.public.js.Custom_Desk.frappe.ready"
+
+# app_include_js = "/assets/practice/js/Custom_Desk.js"
+# app_include_css = "/assets/practice/css/Custom_Desk.css"
+
 
 # include js, css files in header of web template
 # web_include_css = "/assets/practice/css/practice.css"
-# web_include_js = "/assets/practice/js/practice.js"
+# web_include_js = "/assets/practice/js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "practice/public/scss/website"
@@ -137,13 +152,11 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Students": {
+        "before_save": "practice.notify_on_save.notify_on_save"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
@@ -236,7 +249,7 @@ app_license = "mit"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
