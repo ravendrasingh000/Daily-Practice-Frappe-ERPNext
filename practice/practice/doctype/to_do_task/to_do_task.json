@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "PT-.###",
  "creation": "2025-07-23 09:58:43.638426",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -36,10 +37,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-23 10:02:05.516461",
+ "modified": "2025-07-23 16:09:00.379623",
  "modified_by": "Administrator",
  "module": "Practice",
  "name": "To-Do Task",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

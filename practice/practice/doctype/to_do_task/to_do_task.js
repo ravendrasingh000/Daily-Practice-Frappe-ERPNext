@@ -11,3 +11,18 @@
 //     }
 // });
 
+
+frappe.ui.form.on('To-Do Task', {
+    refresh: function(frm) {
+        frm.add_custom_button("Mark Completed", () => {
+            frappe.call({
+                method:'practice.practice.doctype.to_do_task.to_do_task.mark_completed',
+                args: { docname: frm.doc.name },
+                 callback: function(r) {
+                    frappe.msgprint(r.message);
+                    frm.reload_doc();
+                }  
+            })
+        })
+    }
+})
