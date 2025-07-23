@@ -16,7 +16,7 @@ class ToDoTask(Document):
 
 @frappe.whitelist()
 def mark_completed(docname):
-    doc = frappe.get_doc("To-Do Task", 'docname')
+    doc = frappe.get_doc("To-Do Task", docname)
     doc.status = "Completed"
     doc.save()
     return "Marked as Completed"
