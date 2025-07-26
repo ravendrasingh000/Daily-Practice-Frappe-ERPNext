@@ -16,16 +16,19 @@ class ToDoTask(Document):
 
 
 #isko JS se call kiya ja rha hai jo ki form me mark as completed par click karne par call ho raha hai  button JS se create kiya gaya hai
-# @frappe.whitelist()
-# def mark_completed(docname):
-#     doc = frappe.get_doc("To-Do Task", docname)
-#     doc.status = "Completed"
-#     doc.save()
-#     return "Marked as Completed"
+@frappe.whitelist()
+def mark_completed(docname):
+    doc = frappe.get_doc("To-Do Task", docname)
+    doc.status = "Completed"
+    doc.save()
+    return "Marked as Completed"
 
 
 # Frappe REST API Create(Python function ko API ki tarah call karna)
-@frappe.whitelist(allow_guest=True)
-def get_tasks():
-    tasks = frappe.get_all("To-Do Task", fields=["name", "tittle", "status"])
-    return tasks
+# @frappe.whitelist(allow_guest=True)
+# def get_tasks():
+#     tasks = frappe.get_all("To-Do Task", fields=["name", "tittle", "status"])
+#     return tasks
+
+
+
